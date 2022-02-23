@@ -1,13 +1,13 @@
 
 import java.util.Scanner;
 
-public class Test {
+public class P96_094 {
     public static void main(String[] args){
         System.out.println("Input Score:");
         Scanner scan = new Scanner(System.in);
         double score = scan.nextDouble();
         System.out.println(score);
-        
+
         if(score == 100){
             System.out.println("BWM");
         }else if(score > 80 && score <= 99){
