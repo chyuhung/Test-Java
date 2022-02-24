@@ -34,6 +34,20 @@ public class FamilyAccount {
         }
         return ch;
     }
+    public static double readNumber(){
+        double num;
+        Scanner scan = new Scanner(System.in);
+        for(; ; ){
+            try {
+                num = scan.nextDouble();
+                break;
+            }catch (Exception e){
+                System.out.println("输入数字错误，请重新输入：");
+            }
+
+        }
+        return num;
+    }
 
     public static void main(String[] args){
         /*
