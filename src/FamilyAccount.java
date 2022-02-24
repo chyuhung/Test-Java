@@ -4,16 +4,12 @@ public class FamilyAccount {
     //readMenuSelection
     public static char readMenuSelection(){
         char ch;
-        String str;
-        Scanner scan = new Scanner(System.in);
-        System.out.print("请输入数字选择：");
         for(; ;){
-            str = scan.next();
-            ch = str.charAt(0);
+            ch = readKeyBoard();
             if (ch == '1' || ch == '2' || ch == '3' || ch == '4'){
                 break;
             }else {
-                System.out.print("输入数字错误，请重新输入：");
+                System.out.print("输入数字错误，请重新输入（1-4）：");
             }
         }
         return ch;
@@ -22,8 +18,7 @@ public class FamilyAccount {
     public static char readKeyBoard(){
         Scanner scan = new Scanner(System.in);
         String str = scan.next();
-        char ch = str.charAt(0);
-        return ch;
+        return str.charAt(0);
     }
 
     //readConfirmSelection
@@ -34,7 +29,7 @@ public class FamilyAccount {
             if(ch == 'Y' || ch == 'N'){
                 break;
             }else {
-                System.out.println("输入选择错误，请重新输入：");
+                System.out.println("输入选择错误，请重新输入（Y/N）：");
             }
         }
         return ch;
@@ -44,13 +39,14 @@ public class FamilyAccount {
         /*
         * FamilyAccount
         * */
-        for(; ;){
+        start:for(; ;){
             System.out.println("FamilyAccount");
             System.out.println("-------------");
             System.out.println("1.收支明细");
             System.out.println("2.登记收入");
             System.out.println("3.登记支出");
             System.out.println("4.退出");
+            System.out.print("请输入数字选择（1-4）：");
             char ch = readMenuSelection();
             switch (ch){
                 case '1':
@@ -60,6 +56,11 @@ public class FamilyAccount {
                 case '3':
                     break;
                 case '4':
+                    System.out.println("确认退出（Y/N）?");
+                    char isExit = readConfirmSelection();
+                    if(isExit == 'Y'){
+                        break start;
+                    }
                     break;
             }
         }
