@@ -1,3 +1,5 @@
+package com.chyuhung.test;
+
 import java.util.Scanner;
 
 public class FamilyAccount {
@@ -63,14 +65,14 @@ public class FamilyAccount {
 
     public static void main(String[] args){
         /*
-        * FamilyAccount
+        * com.chyuhung.test.FamilyAccount
         * */
         //
         String details = "收支" + "\t" + "金额" + "\t" + "账户余额" + "\t" + "说明" + "\n";
         double accountMoney = 0;
 
         start:for(; ;){
-            System.out.println("FamilyAccount");
+            System.out.println("com.chyuhung.test.FamilyAccount");
             System.out.println("-------------");
             System.out.println("1.收支明细");
             System.out.println("2.登记收入");

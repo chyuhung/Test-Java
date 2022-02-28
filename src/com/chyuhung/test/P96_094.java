@@ -1,3 +1,5 @@
+package com.chyuhung.test;
+
 import java.util.Scanner;
 
 public class P96_094 {

@@ -1,3 +1,5 @@
+package com.chyuhung.test;
+
 public class In1000 {
     public static void main(String[] args){
         int temp = 0;
