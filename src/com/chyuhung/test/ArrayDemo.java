@@ -36,10 +36,8 @@ public class ArrayDemo {
         //查找最高分
         double maxScore = 0;
         for (int i = 0; i < scoreList.length -1 ; i ++ ){
-            if( scoreList[i] > scoreList [i+1]){
+            if( scoreList[i] > maxScore){
                 maxScore = scoreList[i];
-            }else {
-                maxScore = scoreList[i+1];
             }
         }
         System.out.println("最高分是：" + maxScore);
