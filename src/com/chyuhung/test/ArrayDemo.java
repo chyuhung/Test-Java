@@ -29,16 +29,16 @@ public class ArrayDemo {
         //判定成绩等级
         char level ;
         for (int i = 0; i < scoreList.length; i ++){
-            if (scoreList[i] >= 90 && scoreList[i] <= 100){
+            if (maxScore - scoreList[i] <= 10){
                 level = 'A';
                 System.out.println("第" + (i+1) + "位学生的成绩等级为" + level);
-            }else if (scoreList[i] >= 70 && scoreList[i] < 90){
+            }else if (maxScore - scoreList[i] <= 20 && maxScore - scoreList[i] > 10){
                 level = 'B';
                 System.out.println("第" + (i+1) + "位学生的成绩等级为" + level);
-            }else if (scoreList[i] >= 60 && scoreList[i] < 70){
+            }else if (maxScore - scoreList[i] <= 30 && maxScore - scoreList[i] > 20){
                 level = 'C';
                 System.out.println("第" + (i+1) + "位学生的成绩等级为" + level);
-            }else if (scoreList[i] >= 0 && scoreList[i] < 60){
+            }else if (maxScore - scoreList[i] <= 40 && maxScore - scoreList[i] > 30){
                 level = 'D';
                 System.out.println("第" + (i+1) + "位学生的成绩等级为" + level);
             }
