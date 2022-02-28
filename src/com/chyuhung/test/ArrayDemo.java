@@ -27,15 +27,20 @@ public class ArrayDemo {
             }
         }
         //判定成绩等级
+        char level ;
         for (int i = 0; i < scoreList.length; i ++){
             if (scoreList[i] >= 90 && scoreList[i] <= 100){
-                System.out.println("第" + (i+1) + "位学生的成绩等级为A。");
+                level = 'A';
+                System.out.println("第" + (i+1) + "位学生的成绩等级为" + level);
             }else if (scoreList[i] >= 70 && scoreList[i] < 90){
-                System.out.println("第" + (i+1) + "位学生的成绩等级为B。");
+                level = 'B';
+                System.out.println("第" + (i+1) + "位学生的成绩等级为" + level);
             }else if (scoreList[i] >= 60 && scoreList[i] < 70){
-                System.out.println("第" + (i+1) + "位学生的成绩等级为C。");
+                level = 'C';
+                System.out.println("第" + (i+1) + "位学生的成绩等级为" + level);
             }else if (scoreList[i] >= 0 && scoreList[i] < 60){
-                System.out.println("第" + (i+1) + "位学生的成绩等级为D。");
+                level = 'D';
+                System.out.println("第" + (i+1) + "位学生的成绩等级为" + level);
             }
         }
         System.out.println("最高分是：" + maxScore);
