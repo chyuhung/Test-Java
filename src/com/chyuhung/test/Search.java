@@ -8,26 +8,26 @@ package com.chyuhung.test;
  */
 public class Search {
     public static void main(String[] args){
-        int[] numList = {-50,-43,-32,-25,-20,-15,-10,-7,-1,0,-2,6,8,15,18,24,35,46,58};
-        int dest = -1;
+        int[] numList = {-50,-43,-32,-25,-20,-15,-10,-7,-1,0,2,6,8,15,18,24,35,46,58};
+        int dest = -2;
         int headPoint = 0;
-        int endPoint = numList.length - 1;
-        int middlePoint = numList.length / 2;
+        int endPoint = numList.length - 1;//18
+        int middlePoint;
         boolean isFlag = true;
-        for (int i =0 ;i < numList.length;i ++){
-            if( dest > numList[middlePoint]){
-                middlePoint = middlePoint + ((endPoint - middlePoint) / 2);
-            }else if(dest < numList[middlePoint]){
-                endPoint = middlePoint;
-                middlePoint = (endPoint - headPoint) /2;
-            }else if(dest == numList[middlePoint]){
-                System.out.println("OK,索引是"+ middlePoint);
+        while (headPoint <= endPoint){
+            middlePoint = (endPoint + headPoint) / 2;//9 //4 //1
+            if( dest == numList[middlePoint]){
                 isFlag = false;
-            }
-            if(isFlag){
-                System.out.println("没有找到");
+                System.out.println("找到,下标是" + middlePoint);
                 break;
+            }else if(dest < numList[middlePoint]){
+                endPoint = middlePoint -1;//8
+            }else if(dest > numList[middlePoint]){
+                headPoint = middlePoint + 1;//5
             }
+        }
+        if(isFlag){
+            System.out.println("没有找到");
         }
     }
 
